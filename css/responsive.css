@@ -1,0 +1,78 @@
+/* =========================================
+   RESPONSIVE CSS
+========================================= */
+
+/* Tablet (≤ 992px) */
+@media (max-width: 992px) {
+    .container { width: 90%; }
+
+    /* Services & Projects: 2 cột */
+    .service-list,
+    .services-grid,
+    .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; }
+
+    /* About & Contact: đổi chiều */
+    .about-content,
+    .contact-layout { flex-direction: column; gap: 30px; }
+
+    /* Footer: xếp cột cho tablet */
+    .footer-columns { flex-wrap: wrap; gap: 30px; }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+    /* Menu mobile */
+    .main-nav { display: none; }
+    .menu-mobile-icon { display: block; }
+
+    /* Hero Banner nhỏ hơn */
+    .hero-banner { padding: 80px 20px; }
+    .hero-banner h1 { font-size: 32px; }
+    .hero-banner p { font-size: 16px; }
+
+    /* Services & Projects: 1 cột */
+    .service-list,
+    .services-grid,
+    .projects-grid { grid-template-columns: 1fr; }
+
+    /* Service Items */
+    .service-item,
+    .services-grid .service-item,
+    .project-item {
+        width: 100%;
+        max-height: none;
+        padding: 20px;
+        text-align: left;
+        align-items: flex-start;
+    }
+    .service-item img,
+    .project-item img { width: 56px; height: 56px; margin-bottom: 12px; }
+    .service-item h3,
+    .project-item h4 { font-size: 18px; }
+
+    /* Footer: 1 cột */
+    .footer-columns { flex-direction: column; gap: 30px; }
+    .footer-col { width: 100%; text-align: center; }
+}
+
+
+@media (max-width: 480px) {
+    .hero-banner h1 { font-size: 26px; }
+    .hero-banner p { font-size: 14px; }
+
+    .btn-primary,
+    .btn-submit { padding: 10px 20px; font-size: 14px; }
+
+    .about-content,
+    .contact-layout { gap: 20px; }
+
+    .service-item,
+    .project-item { padding: 15px; }
+
+    .services-section h2 { font-size: 24px; }
+}
+
+
+@media (max-width: 1024px) {
+    .service-list { grid-template-columns: repeat(2, 1fr); }
+}
